@@ -9,37 +9,40 @@ collections:
   - name: "settings"
     label: "Site Settings"
     files:
-      - label: "Hero Section"
+      - label: "Hero"
         name: "hero"
         file: "content/hero.yml"
         fields:
-          - { label: "Headline", name: "headline", widget: "string", required: true }
-          - { label: "Subheadline", name: "subheadline", widget: "text" }
-          - { label: "Background Image URL", name: "bg_image", widget: "string" }
-          - { label: "CTA Button Text", name: "cta_text", widget: "string", default: "Claim My Free Operational Audit" }
+          - {label: "Headline", name: "headline", widget: "string", required: true}
+          - {label: "Subheadline", name: "subheadline", widget: "text"}
+
+      - label: "Specialist Focus"
+        name: "specialist"
+        file: "content/specialist.yml"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Subtitle", name: "subtitle", widget: "string"}
 
       - label: "Challenges"
         name: "challenges"
         file: "content/challenges.yml"
         fields:
-          - label: "Challenge Items"
+          - label: "Items"
             name: "items"
             widget: "list"
             fields:
-              - { label: "Icon Name", name: "icon", widget: "string", hint: "e.g. sync_problem" }
-              - { label: "Text", name: "text", widget: "text" }
+              - {label: "Icon", name: "icon", widget: "string"}
+              - {label: "Text", name: "text", widget: "text"}
 
-      - label: "Testimonials"
-        name: "testimonials"
-        file: "content/testimonials.yml"
+      - label: "How FlexOps Works Benefits"
+        name: "benefits"
+        file: "content/benefits.yml"
         fields:
-          - label: "Testimonial Items"
+          - label: "Benefit Items"
             name: "items"
             widget: "list"
             fields:
-              - { label: "Quote", name: "quote", widget: "text" }
-              - { label: "Author", name: "author", widget: "string" }
-              - { label: "Location", name: "location", widget: "string" }
+              - {label: "Text", name: "text", widget: "text"}
 
       - label: "FAQ"
         name: "faq"
@@ -49,15 +52,5 @@ collections:
             name: "items"
             widget: "list"
             fields:
-              - { label: "Question", name: "question", widget: "string" }
-              - { label: "Answer", name: "answer", widget: "text" }
-
-  - name: "general"
-    label: "General"
-    files:
-      - label: "Results / Stats"
-        name: "results"
-        file: "content/results.yml"
-        fields:
-          - { label: "Direct Bookings Increase", name: "bookings_increase", widget: "string", default: "+24%" }
-          - { label: "Time Saved", name: "time_saved", widget: "string", default: "-15hr" }
+              - {label: "Question", name: "question", widget: "string"}
+              - {label: "Answer", name: "answer", widget: "text"}
