@@ -1,90 +1,95 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>FlexOps | Operational Excellence for Icelandic Car Rental Fleets</title>
+    <meta name="description" content="Done-for-you back-office support for Iceland car rental operators. More direct bookings, less manual work.">
 
-<html class="light" lang="en"><head></head><body class="bg-background text-on-background font-body antialiased">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
 
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "surface-dim": "#d4dbe2",
-              "on-tertiary-fixed-variant": "#783200",
-              "error": "#ba1a1a",
-              "tertiary": "#9d4300",
-              "surface-tint": "#006b5f",
-              "on-surface-variant": "#3c4947",
-              "on-secondary-fixed": "#131b2e",
-              "inverse-on-surface": "#ebf1f9",
-              "inverse-surface": "#2b3137",
-              "error-container": "#ffdad6",
-              "on-tertiary-container": "#642800",
-              "on-primary": "#ffffff",
-              "on-tertiary": "#ffffff",
-              "background": "#f6f9ff",
-              "secondary-fixed-dim": "#bec6e0",
-              "on-background": "#161c22",
-              "outline": "#6c7a77",
-              "surface-container-highest": "#dde3eb",
-              "tertiary-fixed": "#ffdbca",
-              "primary-container": "#14b8a6",
-              "surface-container": "#e8eef6",
-              "primary-fixed-dim": "#4fdbc8",
-              "surface-variant": "#dde3eb",
-              "on-primary-fixed": "#00201c",
-              "on-primary-fixed-variant": "#005048",
-              "inverse-primary": "#4fdbc8",
-              "primary-fixed": "#71f8e4",
-              "on-secondary-container": "#5c647a",
-              "secondary-container": "#dae2fd",
-              "on-error": "#ffffff",
-              "surface-container-low": "#eef4fc",
-              "surface-bright": "#f6f9ff",
-              "on-surface": "#161c22",
-              "secondary": "#565e74",
-              "primary": "#006b5f",
-              "on-secondary": "#ffffff",
-              "on-error-container": "#93000a",
-              "surface-container-lowest": "#ffffff",
-              "on-primary-container": "#00423b",
-              "secondary-fixed": "#dae2fd",
-              "outline-variant": "#bbcac6",
-              "on-secondary-fixed-variant": "#3f465c",
-              "tertiary-container": "#ff8134",
-              "surface-container-high": "#e3e9f1",
-              "on-tertiary-fixed": "#341100",
-              "tertiary-fixed-dim": "#ffb690",
-              "surface": "#f6f9ff"
-            },
-            fontFamily: {
-              "headline": ["Inter"],
-              "body": ["Inter"],
-              "label": ["Inter"]
-            },
-            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
-            keyframes: {
-              'shimmer': {
-                '0%': { backgroundPosition: '-200% 0' },
-                '100%': { backgroundPosition: '200% 0' },
-              },
-              'pulse-subtle': {
-                '0%, 100%': { transform: 'scale(1)' },
-                '50%': { transform: 'scale(1.02)' },
-              }
-            },
-            animation: {
-              'shimmer': 'shimmer 3s infinite linear',
-              'pulse-subtle': 'pulse-subtle 4s infinite ease-in-out',
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-dim": "#d4dbe2",
+                        "on-tertiary-fixed-variant": "#783200",
+                        "error": "#ba1a1a",
+                        "tertiary": "#9d4300",
+                        "surface-tint": "#006b5f",
+                        "on-surface-variant": "#3c4947",
+                        "on-secondary-fixed": "#131b2e",
+                        "inverse-on-surface": "#ebf1f9",
+                        "inverse-surface": "#2b3137",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#642800",
+                        "on-primary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "background": "#f6f9ff",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "on-background": "#161c22",
+                        "outline": "#6c7a77",
+                        "surface-container-highest": "#dde3eb",
+                        "tertiary-fixed": "#ffdbca",
+                        "primary-container": "#14b8a6",
+                        "surface-container": "#e8eef6",
+                        "primary-fixed-dim": "#4fdbc8",
+                        "surface-variant": "#dde3eb",
+                        "on-primary-fixed": "#00201c",
+                        "on-primary-fixed-variant": "#005048",
+                        "inverse-primary": "#4fdbc8",
+                        "primary-fixed": "#71f8e4",
+                        "on-secondary-container": "#5c647a",
+                        "secondary-container": "#dae2fd",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#eef4fc",
+                        "surface-bright": "#f6f9ff",
+                        "on-surface": "#161c22",
+                        "secondary": "#565e74",
+                        "primary": "#006b5f",
+                        "on-secondary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#00423b",
+                        "secondary-fixed": "#dae2fd",
+                        "outline-variant": "#bbcac6",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "tertiary-container": "#ff8134",
+                        "surface-container-high": "#e3e9f1",
+                        "on-tertiary-fixed": "#341100",
+                        "tertiary-fixed-dim": "#ffb690",
+                        "surface": "#f6f9ff"
+                    },
+                    fontFamily: {
+                        "headline": ["Inter"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    },
+                    borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+                    keyframes: {
+                        'shimmer': {
+                            '0%': { backgroundPosition: '-200% 0' },
+                            '100%': { backgroundPosition: '200% 0' },
+                        },
+                        'pulse-subtle': {
+                            '0%, 100%': { transform: 'scale(1)' },
+                            '50%': { transform: 'scale(1.02)' },
+                        }
+                    },
+                    animation: {
+                        'shimmer': 'shimmer 3s infinite linear',
+                        'pulse-subtle': 'pulse-subtle 4s infinite ease-in-out',
+                    }
+                }
             }
-          },
-        },
-      }
+        }
     </script>
-<style>
+
+    <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
@@ -95,8 +100,6 @@
         .ambient-shadow {
             box-shadow: 0 32px 48px -12px rgba(22, 28, 34, 0.06);
         }
-        
-        /* Animation Base Styles */
         .reveal {
             opacity: 0;
             transform: translateY(20px);
@@ -106,8 +109,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-        
-        /* Staggered Child reveals */
         .reveal-group > * {
             opacity: 0;
             transform: translateY(20px);
@@ -117,8 +118,6 @@
             opacity: 1;
             transform: translateY(0);
         }
-        
-        /* Shimmer Effect for Primary Buttons */
         .cta-shimmer {
             background: linear-gradient(90deg, #9d4300 0%, #bd5100 25%, #9d4300 50%, #bd5100 75%, #9d4300 100%);
             background-size: 200% auto;
@@ -126,8 +125,6 @@
         .cta-shimmer:hover {
             animation: shimmer 1.5s infinite linear;
         }
-
-        /* Advantage Card Glow and Lift */
         .advantage-card {
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -137,455 +134,417 @@
             border-color: rgba(0, 107, 95, 0.2);
         }
     </style>
+</head>
+<body class="bg-background text-on-background font-body antialiased">
+
 <!-- Sticky CTA Bar -->
 <div class="fixed top-0 w-full z-[60] bg-primary text-on-primary py-3 px-6 flex justify-between items-center transform -translate-y-full transition-transform duration-300 shadow-lg" id="sticky-cta">
-<p class="font-bold text-sm md:text-base">Claim My Free Operational Audit</p>
-<button class="bg-on-primary text-primary px-4 py-1.5 rounded-lg font-bold text-xs uppercase tracking-wider hover:bg-opacity-90 transition-colors" onclick="document.getElementById('audit-form').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+    <p class="font-bold text-sm md:text-base">Claim My Free Operational Audit</p>
+    <button class="bg-on-primary text-primary px-4 py-1.5 rounded-lg font-bold text-xs uppercase tracking-wider hover:bg-opacity-90 transition-colors" onclick="document.getElementById('audit-form').scrollIntoView({behavior: 'smooth'})">Get Started</button>
 </div>
+
 <!-- TopAppBar -->
 <header class="fixed top-0 w-full z-50 bg-white/10 backdrop-blur-xl border-b border-white/10">
-<nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
-<div class="text-xl font-bold tracking-tighter text-white font-headline">
-                FlexOps
-            </div>
-<div class="flex items-center gap-6">
-<button class="bg-primary text-on-primary px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-opacity-90 hover:scale-105 active:scale-95 transition-all duration-200" onclick="document.getElementById('audit-form').scrollIntoView({behavior: 'smooth'})">
-                    Claim Free Audit
-                </button>
-</div>
-</nav>
+    <nav class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+        <div class="text-xl font-bold tracking-tighter text-white font-headline">FlexOps</div>
+        <div class="flex items-center gap-6">
+            <button class="bg-primary text-on-primary px-5 py-2.5 rounded-lg font-semibold text-sm hover:bg-opacity-90 hover:scale-105 active:scale-95 transition-all duration-200" onclick="document.getElementById('audit-form').scrollIntoView({behavior: 'smooth'})">Claim Free Audit</button>
+        </div>
+    </nav>
 </header>
+
 <main>
-<!-- Hero Section -->
-<section class="relative min-h-screen flex items-center overflow-hidden reveal">
-<!-- Full-bleed Background Image -->
-<div class="absolute inset-0 z-0">
-<img alt="A professional, high-end automotive photograph of a modern 4x4 SUV driving on a winding road through a dramatic Icelandic landscape at night with Northern Lights" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSfZsYsyGnTqjuIPaxeSRID0M6levTyTpNiePGwfdHla9YA6L2h7wvkJZQh_u73aRBHKzMRyl1ZzJLn3Sz8wD1UYtbUvHjC19naB634zii5q5ZUCJZ7CT74mtI7eyzOwU22-jrNf_OShSIyWvGgspS9B9wqPLm9Gxa7Sckoz2G8QxGLutw-WeQMhwSOkENrTvuTjT6WfINx4hvdaXzJHjBTVzTmEXPNyrrgNZmJ6fSMhLqzhBg-Sz1feph-twtRsH76xBHO3jYdbE"/>
-<!-- Dark Overlay/Gradient for readability -->
-<div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
-<!-- Dashboard Overlay Mockup -->
-<div class="absolute right-[-10%] top-[20%] w-[50%] h-[60%] hidden lg:block opacity-30 pointer-events-none transform rotate-[-5deg]">
-<div class="bg-black/60 backdrop-blur-md rounded-2xl border border-white/20 p-6 shadow-2xl overflow-hidden h-full">
-<div class="flex items-center justify-between mb-8">
-<div class="h-4 w-32 bg-white/20 rounded"></div>
-<div class="flex gap-2">
-<div class="h-4 w-4 bg-primary/40 rounded-full"></div>
-<div class="h-4 w-4 bg-tertiary/40 rounded-full"></div>
-</div>
-</div>
-<div class="grid grid-cols-7 gap-4 mb-8">
-<div class="h-20 bg-primary/20 rounded animate-pulse"></div>
-<div class="h-24 bg-primary/30 rounded"></div>
-<div class="h-16 bg-primary/10 rounded"></div>
-<div class="h-28 bg-primary/40 rounded animate-pulse"></div>
-<div class="h-20 bg-primary/20 rounded"></div>
-<div class="h-32 bg-primary/50 rounded"></div>
-<div class="h-24 bg-primary/30 rounded"></div>
-</div>
-<div class="space-y-4">
-<div class="h-2 w-full bg-white/10 rounded"></div>
-<div class="h-2 w-3/4 bg-white/10 rounded"></div>
-<div class="h-2 w-1/2 bg-white/10 rounded"></div>
-</div>
-</div>
-</div>
-</div>
-<div class="relative z-10 px-6 py-20 md:py-32 max-w-7xl mx-auto w-full">
-<div class="grid lg:grid-cols-12 gap-12 items-center">
-<div class="lg:col-span-8 space-y-8">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 backdrop-blur-md text-primary-fixed-dim text-xs font-bold tracking-widest uppercase border border-primary/30">
-<span class="material-symbols-outlined text-sm">trending_up</span>
-                        Operational Excellence for Iceland Fleet Operators
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center overflow-hidden reveal">
+        <div class="absolute inset-0 z-0">
+            <img alt="A professional, high-end automotive photograph of a modern 4x4 SUV driving on a winding road through a dramatic Icelandic landscape at night with Northern Lights" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSfZsYsyGnTqjuIPaxeSRID0M6levTyTpNiePGwfdHla9YA6L2h7wvkJZQh_u73aRBHKzMRyl1ZzJLn3Sz8wD1UYtbUvHjC19naB634zii5q5ZUCJZ7CT74mtI7eyzOwU22-jrNf_OShSIyWvGgspS9B9wqPLm9Gxa7Sckoz2G8QxGLutw-WeQMhwSOkENrTvuTjT6WfINx4hvdaXzJHjBTVzTmEXPNyrrgNZmJ6fSMhLqzhBg-Sz1feph-twtRsH76xBHO3jYdbE"/>
+            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent"></div>
+            <!-- Dashboard Overlay Mockup -->
+            <div class="absolute right-[-10%] top-[20%] w-[50%] h-[60%] hidden lg:block opacity-30 pointer-events-none transform rotate-[-5deg]">
+                <div class="bg-black/60 backdrop-blur-md rounded-2xl border border-white/20 p-6 shadow-2xl overflow-hidden h-full">
+                    <div class="flex items-center justify-between mb-8">
+                        <div class="h-4 w-32 bg-white/20 rounded"></div>
+                        <div class="flex gap-2">
+                            <div class="h-4 w-4 bg-primary/40 rounded-full"></div>
+                            <div class="h-4 w-4 bg-tertiary/40 rounded-full"></div>
+                        </div>
                     </div>
-<h1 class="text-4xl md:text-6xl font-extrabold tracking-tighter text-white leading-[1.1] font-headline">
+                    <div class="grid grid-cols-7 gap-4 mb-8">
+                        <div class="h-20 bg-primary/20 rounded animate-pulse"></div>
+                        <div class="h-24 bg-primary/30 rounded"></div>
+                        <div class="h-16 bg-primary/10 rounded"></div>
+                        <div class="h-28 bg-primary/40 rounded animate-pulse"></div>
+                        <div class="h-20 bg-primary/20 rounded"></div>
+                        <div class="h-32 bg-primary/50 rounded"></div>
+                        <div class="h-24 bg-primary/30 rounded"></div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="h-2 w-full bg-white/10 rounded"></div>
+                        <div class="h-2 w-3/4 bg-white/10 rounded"></div>
+                        <div class="h-2 w-1/2 bg-white/10 rounded"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="relative z-10 px-6 py-20 md:py-32 max-w-7xl mx-auto w-full">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-8 space-y-8">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 backdrop-blur-md text-primary-fixed-dim text-xs font-bold tracking-widest uppercase border border-primary/30">
+                        <span class="material-symbols-outlined text-sm">trending_up</span> Operational Excellence for Iceland Fleet Operators
+                    </div>
+                    <h1 class="text-4xl md:text-6xl font-extrabold tracking-tighter text-white leading-[1.1] font-headline">
                         Unlock Higher Fleet Utilization, More Direct Bookings, and Smoother Operations — <span class="text-primary-fixed">Built for Iceland’s Car Rental Market</span>
-</h1>
-<p class="text-xl text-slate-200 max-w-2xl leading-relaxed">
+                    </h1>
+                    <p class="text-xl text-slate-200 max-w-2xl leading-relaxed">
                         Expert back-office support for inquiry handling, fresh listings, pricing reviews that factor in the new kilometre road fees, and competitor-smart social strategies that win more direct customers.
                     </p>
-<div class="space-y-4">
-<div class="flex flex-col sm:flex-row gap-4">
-<button class="cta-shimmer text-on-tertiary px-8 py-4 rounded-xl font-bold text-lg ambient-shadow hover:scale-105 transition-all duration-300 active:scale-95 animate-pulse-subtle" onclick="document.getElementById('audit-form').scrollIntoView({behavior: 'smooth'})">
-                                Claim My Free Operational Audit
-                            </button>
-</div>
-<p class="text-sm text-slate-300 font-medium flex items-center gap-2">
-<span class="material-symbols-outlined text-sm text-primary-fixed">check_circle</span>
-                            Takes 60 seconds • Limited audit slots before peak season • No credit card required
+                    <div class="space-y-4">
+                        <button class="cta-shimmer text-on-tertiary px-8 py-4 rounded-xl font-bold text-lg ambient-shadow hover:scale-105 transition-all duration-300 active:scale-95 animate-pulse-subtle" onclick="document.getElementById('audit-form').scrollIntoView({behavior: 'smooth'})">
+                            Claim My Free Operational Audit
+                        </button>
+                        <p class="text-sm text-slate-300 font-medium flex items-center gap-2">
+                            <span class="material-symbols-outlined text-sm text-primary-fixed">check_circle</span> Takes 60 seconds • Limited audit slots before peak season • No credit card required
                         </p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Challenges Section -->
-<section class="py-24 px-6 max-w-7xl mx-auto">
-<div class="mb-16 reveal">
-<h2 class="text-3xl md:text-5xl font-bold tracking-tight text-on-background mb-4 font-headline">The Real Challenges Every <br/><span class="text-error">Icelandic Operator Faces</span></h2>
-<p class="text-xl text-on-surface-variant max-w-2xl">Running a car rental fleet in Iceland is rewarding — but the short, intense summer season creates constant pressure.</p>
-</div>
-<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal-group" data-stagger="0.1">
-<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/15 flex flex-col group transition-all duration-300 hover:shadow-lg hover:border-primary/20 min-h-[160px]">
-<div class="space-y-4">
-<span class="material-symbols-outlined text-4xl text-primary transition-transform group-hover:scale-110">sync_problem</span>
-<p class="text-on-surface text-lg font-medium">Time-consuming fleet updates and availability checks eat into your day</p>
-</div>
-</div>
-<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/15 flex flex-col group transition-all duration-300 hover:shadow-lg hover:border-primary/20 min-h-[160px]">
-<div class="space-y-4">
-<span class="material-symbols-outlined text-4xl text-primary transition-transform group-hover:scale-110">forward_to_inbox</span>
-<p class="text-on-surface text-lg font-medium">Delayed responses to inquiries mean lost bookings to faster competitors</p>
-</div>
-</div>
-<div class="bg-primary p-8 rounded-2xl text-on-primary flex flex-col group transition-all duration-300 hover:shadow-xl hover:scale-[1.02] min-h-[160px]">
-<div class="space-y-4">
-<span class="material-symbols-outlined text-4xl transition-transform group-hover:rotate-12">monetization_on</span>
-<p class="text-lg font-medium">Pricing and listings that don’t adapt quickly enough to demand or the new kilometre-based road fees</p>
-</div>
-</div>
-<div class="bg-surface-container-high p-8 rounded-2xl flex flex-col group transition-all duration-300 hover:shadow-lg min-h-[160px]">
-<span class="material-symbols-outlined text-4xl mb-4 text-on-surface-variant transition-transform group-hover:scale-110">photo_library</span>
-<p class="text-on-surface text-lg font-medium">Outdated content and photos that make your cars invisible on your own site and OTAs</p>
-</div>
-<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/15 flex flex-col group transition-all duration-300 hover:shadow-lg hover:border-primary/20 min-h-[160px]">
-<span class="material-symbols-outlined text-4xl mb-4 text-primary transition-transform group-hover:scale-110">bar_chart</span>
-<p class="text-on-surface text-lg font-medium">No clear picture of which vehicles are actually making money</p>
-</div>
-<div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/15 flex flex-col group transition-all duration-300 hover:shadow-lg hover:border-error/20 min-h-[160px]">
-<div class="space-y-4">
-<span class="material-symbols-outlined text-4xl text-error transition-transform group-hover:scale-110">share</span>
-<p class="text-on-surface text-lg font-medium">Weak or inconsistent social presence that fails to convert followers into direct bookings</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Solutions Cards -->
-<section class="py-24 bg-surface-container-low">
-<div class="max-w-7xl mx-auto px-6">
-<div class="mb-16 reveal">
-<h2 class="text-3xl md:text-5xl font-bold tracking-tight text-on-background mb-4 font-headline">We don’t sell software or tools. We become your <br/><span class="text-primary">done-for-you back-office partner</span></h2>
-<p class="text-xl text-on-surface-variant">Handling the daily operational tasks so you stay focused on growth.</p>
-</div>
-<div class="grid md:grid-cols-2 gap-8 reveal-group" data-stagger="0.15">
-<div class="advantage-card bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/10 space-y-4 cursor-default">
-<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container">
-<span class="material-symbols-outlined">move_to_inbox</span>
-</div>
-<h4 class="text-xl font-bold">Booking management</h4>
-<p class="text-on-surface-variant text-sm">We handle your inquiries and confirmations quickly and accurately.</p>
-</div>
-<div class="advantage-card bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/10 space-y-4 cursor-default">
-<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container">
-<span class="material-symbols-outlined">sync_saved_locally</span>
-</div>
-<h4 class="text-xl font-bold">Fleet content updates</h4>
-<p class="text-on-surface-variant text-sm">We keep listings, photos, and descriptions fresh and high-converting across all channels.</p>
-</div>
-<div class="advantage-card bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/10 space-y-4 cursor-default">
-<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container">
-<span class="material-symbols-outlined">price_change</span>
-</div>
-<h4 class="text-xl font-bold">Pricing reviews</h4>
-<p class="text-on-surface-variant text-sm">We review and update your rates to match demand and the new road-fee structure.</p>
-</div>
-<div class="advantage-card bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/10 space-y-4 cursor-default">
-<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container">
-<span class="material-symbols-outlined">calendar_today</span>
-</div>
-<h4 class="text-xl font-bold">Social media strategy</h4>
-<p class="text-on-surface-variant text-sm">We create and manage your calendar, track competitors, and post content that drives direct traffic and outperforms the competition.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- Process Section -->
-<section class="py-24 bg-surface overflow-hidden">
-<div class="max-w-7xl mx-auto px-6">
-<div class="text-center max-w-3xl mx-auto mb-20 reveal">
-<h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6 font-headline">The FlexOps Framework</h2>
-<p class="text-lg text-on-surface-variant">A 4-step transformation to turn your rental business into a high-precision operational machine.</p>
-</div>
-<div class="relative grid md:grid-cols-4 gap-8 reveal-group" data-stagger="0.2">
-<!-- Step 1 -->
-<div class="relative z-10 group transition-all duration-300">
-<div class="text-8xl font-black text-primary/5 absolute -top-12 -left-4 pointer-events-none group-hover:text-primary/10 transition-colors duration-500">01</div>
-<div class="space-y-4 pt-4">
-<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container transition-transform duration-300 group-hover:scale-110">
-<span class="material-symbols-outlined">search</span>
-</div>
-<h4 class="text-xl font-bold">Audit</h4>
-<p class="text-on-surface-variant text-sm leading-relaxed">We review your current operations and deliver clear, prioritized insights.</p>
-</div>
-</div>
-<!-- Step 2 -->
-<div class="relative z-10 group transition-all duration-300">
-<div class="text-8xl font-black text-primary/5 absolute -top-12 -left-4 pointer-events-none group-hover:text-primary/10 transition-colors duration-500">02</div>
-<div class="space-y-4 pt-4">
-<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container transition-transform duration-300 group-hover:scale-110">
-<span class="material-symbols-outlined">work_history</span>
-</div>
-<h4 class="text-xl font-bold">Take Over</h4>
-<p class="text-on-surface-variant text-sm leading-relaxed">We handle the specific back-office tasks you need support with.</p>
-</div>
-</div>
-<!-- Step 3 -->
-<div class="relative z-10 group transition-all duration-300">
-<div class="text-8xl font-black text-primary/5 absolute -top-12 -left-4 pointer-events-none group-hover:text-primary/10 transition-colors duration-500">03</div>
-<div class="space-y-4 pt-4">
-<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container transition-transform duration-300 group-hover:scale-110">
-<span class="material-symbols-outlined">tune</span>
-</div>
-<h4 class="text-xl font-bold">Track &amp; Optimize</h4>
-<p class="text-on-surface-variant text-sm leading-relaxed">We provide regular performance reports and make ongoing adjustments for Iceland’s seasonality and regulations.</p>
-</div>
-</div>
-<!-- Step 4 -->
-<div class="relative z-10 group transition-all duration-300">
-<div class="text-8xl font-black text-primary/5 absolute -top-12 -left-4 pointer-events-none group-hover:text-primary/10 transition-colors duration-500">04</div>
-<div class="space-y-4 pt-4">
-<div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container transition-transform duration-300 group-hover:scale-110">
-<span class="material-symbols-outlined">auto_graph</span>
-</div>
-<h4 class="text-xl font-bold">Scale</h4>
-<p class="text-on-surface-variant text-sm leading-relaxed">Direct revenue grows while your daily workload stays manageable.</p>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Proof / Results Section -->
-<section class="py-24 px-6 reveal">
-<div class="max-w-7xl mx-auto bg-on-background text-on-primary rounded-[2rem] p-12 md:p-20 relative overflow-hidden group">
-<div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/20 to-transparent transition-opacity duration-1000 group-hover:opacity-40"></div>
-<div class="relative z-10">
-<div class="grid md:grid-cols-2 gap-12 items-center mb-16">
-<div>
-<h2 class="text-4xl md:text-5xl font-bold mb-8 font-headline leading-tight">Delivering Results for Icelandic Fleets</h2>
-<div class="flex flex-wrap gap-8">
-<div class="flex flex-col">
-<span class="text-primary-fixed text-4xl font-bold">+24%</span>
-<span class="text-sm opacity-70">direct bookings in first 30 days</span>
-</div>
-<div class="flex flex-col">
-<span class="text-primary-fixed text-4xl font-bold">-15hr</span>
-<span class="text-sm opacity-70">Less time on manual updates</span>
-</div>
-</div>
-</div>
-<div class="space-y-6">
-<div class="flex items-center gap-4 reveal-group" data-stagger="0.2">
-<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-primary-fixed">verified</span>
-</div>
-<p class="text-lg opacity-90">Reduced OTA reliance through direct booking optimization.</p>
-</div>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0">
-<span class="material-symbols-outlined text-primary-fixed">speed</span>
-</div>
-<p class="text-lg opacity-90">Full transparency via regular back-office performance reports.</p>
-</div>
-</div>
-</div>
-<!-- Testimonials Grid -->
-<div class="grid lg:grid-cols-3 gap-6">
-<!-- Testimonial 1 -->
-<div class="glass-panel p-8 rounded-2xl border border-white/10 text-on-background transition-transform duration-500 hover:scale-[1.02]">
-<div class="flex gap-1 mb-4 text-tertiary">
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-<p class="text-base italic mb-6">“FlexOps took the operational load off our plate so we could finally reduce OTA reliance and make the most of the summer rush.”</p>
-<div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-surface-dim overflow-hidden border border-primary/20">
-<img alt="owner avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDecq5qwlyFPZ0mHNrc6IyZKf69lzButfAmHmWtCu7rreqn9G6OUlh2SHU8t_o9859ZSdtGgjDKH9Z6fbALNgEjjG7DwWzMVwxXNd2ovmy2BCvWv3XKeOjguJ-XlYjYDAkoVzN_N2-nQcnlDnfsyHcrfcu5k4lnRam6IjEQIhN_kdI6iXnEWeDbUtPEH3a2u4f_4lknqzEOOTfRKruGBnTx6gYC_3QfFLHrh2IM2mCb-1e1xgw_ysLOJcVNI3fmxcJ5HeNLSOrh0xg"/>
-</div>
-<div>
-<div class="font-bold text-sm">Owner</div>
-<div class="text-[10px] text-on-surface-variant">Reykjavik mid-size fleet</div>
-</div>
-</div>
-</div>
-<!-- Testimonial 2 -->
-<div class="glass-panel p-8 rounded-2xl border border-white/10 text-on-background transition-transform duration-500 hover:scale-[1.02]">
-<div class="flex gap-1 mb-4 text-tertiary">
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-<p class="text-base italic mb-6">“The audit was eye-opening. They handled the back-office tasks we hated and bookings went up almost immediately.”</p>
-<div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-surface-dim overflow-hidden border border-primary/20 flex items-center justify-center">
-<span class="material-symbols-outlined text-on-surface-variant">person</span>
-</div>
-<div>
-<div class="font-bold text-sm">Owner</div>
-<div class="text-[10px] text-on-surface-variant">South Coast fleet</div>
-</div>
-</div>
-</div>
-<!-- Testimonial 3 -->
-<div class="glass-panel p-8 rounded-2xl border border-white/10 text-on-background transition-transform duration-500 hover:scale-[1.02]">
-<div class="flex gap-1 mb-4 text-tertiary">
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
-</div>
-<p class="text-base italic mb-6">“Finally, a partner who understands Icelandic road taxes and the unique pressure of our peak season. Highly recommended.”</p>
-<div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-surface-dim overflow-hidden border border-primary/20 flex items-center justify-center">
-<span class="material-symbols-outlined text-on-surface-variant">person</span>
-</div>
-<div>
-<div class="font-bold text-sm">Manager</div>
-<div class="text-[10px] text-on-surface-variant">North Iceland Rentals</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- What You Get Section -->
-<section class="py-24 px-6 bg-surface-container-low">
-<div class="max-w-4xl mx-auto">
-<div class="text-center mb-16 reveal">
-<h2 class="text-4xl font-bold mb-4 font-headline">Your Free Operational Audit – What You Get</h2>
-<p class="text-on-surface-variant">You receive actionable insights with zero upfront cost. Only pay if you decide to move forward with our support.</p>
-</div>
-<div class="grid md:grid-cols-2 gap-4 reveal-group mb-12" data-stagger="0.1">
-<div class="bg-white p-6 rounded-xl border border-outline-variant/10 flex items-start gap-4 transition-all duration-300 hover:shadow-md hover:border-primary/20 group relative">
-<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">analytics</span>
-<div>
-<h5 class="font-bold flex items-center gap-2">Revenue Leak Mapping <span class="text-[10px] font-bold bg-primary/10 text-primary px-1.5 py-0.5 rounded border border-primary/20 flex items-center gap-1"><span class="material-symbols-outlined text-[10px]">picture_as_pdf</span> Sample PDF</span></h5>
-<p class="text-sm text-on-surface-variant">Clear picture of where revenue is leaking.</p>
-</div>
-</div>
-<div class="bg-white p-6 rounded-xl border border-outline-variant/10 flex items-start gap-4 transition-all duration-300 hover:shadow-md hover:border-primary/20 group">
-<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">assignment_turned_in</span>
-<div>
-<h5 class="font-bold">Back-office Priority List</h5>
-<p class="text-sm text-on-surface-variant">Prioritized list of back-office tasks we can handle for you.</p>
-</div>
-</div>
-<div class="bg-white p-6 rounded-xl border border-outline-variant/10 flex items-start gap-4 transition-all duration-300 hover:shadow-md hover:border-primary/20 group">
-<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">calendar_today</span>
-<div>
-<h5 class="font-bold">30-Day Action Plan</h5>
-<p class="text-sm text-on-surface-variant">Realistic 30-day action plan for immediate improvements.</p>
-</div>
-</div>
-<div class="bg-white p-6 rounded-xl border border-outline-variant/10 flex items-start gap-4 transition-all duration-300 hover:shadow-md hover:border-primary/20 group">
-<span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">share</span>
-<div>
-<h5 class="font-bold">Social Content Sample</h5>
-<p class="text-sm text-on-surface-variant">Sample social content calendar with competitor insights.</p>
-</div>
-</div>
-</div>
-<p class="text-center text-on-surface-variant font-medium text-sm md:text-base italic">“Delivered as a clean PDF report within 5 business days.”</p>
-</div>
-</section>
-<!-- FAQ Section -->
-<section class="py-24 px-6 max-w-4xl mx-auto reveal">
-<h2 class="text-3xl font-bold mb-12 text-center font-headline">Frequently Asked Questions</h2>
-<div class="space-y-6 reveal-group" data-stagger="0.1">
-<div class="bg-surface-container rounded-2xl p-6 transition-all duration-300 hover:bg-surface-container-high cursor-default">
-<h4 class="font-bold mb-2">How long does the audit take?</h4>
-<p class="text-on-surface-variant text-sm">60 seconds to request. Full report delivered within 5 business days.</p>
-</div>
-<div class="bg-surface-container rounded-2xl p-6 transition-all duration-300 hover:bg-surface-container-high cursor-default">
-<h4 class="font-bold mb-2">Do I need to change my current setup?</h4>
-<p class="text-on-surface-variant text-sm">No. We simply take over the back-office tasks you want help with.</p>
-</div>
-<div class="bg-surface-container rounded-2xl p-6 transition-all duration-300 hover:bg-surface-container-high cursor-default">
-<h4 class="font-bold mb-2">Is this only for big fleets?</h4>
-<p class="text-on-surface-variant text-sm">No — we work with Icelandic operators running 8–80 vehicles who want practical operational relief and more direct bookings.</p>
-</div>
-<div class="bg-surface-container rounded-2xl p-6 transition-all duration-300 hover:bg-surface-container-high cursor-default">
-<h4 class="font-bold mb-2">What if I already have systems in place?</h4>
-<p class="text-on-surface-variant text-sm">Perfect. We work alongside whatever you’re using and handle the manual work.</p>
-</div>
-</div>
-</section>
-<!-- Final CTA Section -->
-<section class="py-24 px-6 max-w-5xl mx-auto reveal" id="audit-form">
-<div class="bg-surface-container-high rounded-[3rem] p-12 md:p-20 text-center space-y-12 shadow-inner border border-outline-variant/10">
-<div class="max-w-2xl mx-auto">
-<h2 class="text-4xl md:text-5xl font-bold mb-6 tracking-tighter font-headline">Ready to run a more profitable, less stressful rental operation this season?</h2>
-<p class="text-on-surface-variant">Let FlexOps handle the back-office heavy lifting so you can focus on growth.</p>
-</div>
-<div class="space-y-6">
-<p class="text-[11px] font-bold uppercase tracking-[0.2em] text-primary/70">Zero cost • Delivered in 5 business days • Only pay if you move forward</p>
-<form class="max-w-xl mx-auto grid md:grid-cols-2 gap-4 text-left">
-<div class="space-y-1">
-<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-2">Name</label>
-<input class="w-full rounded-xl border-outline-variant/30 focus:ring-primary focus:border-primary p-3 transition-shadow duration-300 hover:shadow-sm" placeholder="Your Name" type="text"/>
-</div>
-<div class="space-y-1">
-<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-2">Email</label>
-<input class="w-full rounded-xl border-outline-variant/30 focus:ring-primary focus:border-primary p-3 transition-shadow duration-300 hover:shadow-sm" placeholder="email@company.is" type="email"/>
-</div>
-<div class="space-y-1">
-<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-2">Fleet Size</label>
-<select class="w-full rounded-xl border-outline-variant/30 focus:ring-primary focus:border-primary p-3 transition-shadow duration-300 hover:shadow-sm">
-<option>8-20 vehicles</option>
-<option>21-50 vehicles</option>
-<option>51-80 vehicles</option>
-<option>80+ vehicles</option>
-</select>
-</div>
-<div class="space-y-1">
-<label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-2">Biggest Challenge (Optional)</label>
-<input class="w-full rounded-xl border-outline-variant/30 focus:ring-primary focus:border-primary p-3 transition-shadow duration-300 hover:shadow-sm" placeholder="e.g. Manual sync, Road fees" type="text"/>
-</div>
-<div class="md:col-span-2 mt-4">
-<button class="cta-shimmer text-on-tertiary px-12 py-5 rounded-xl font-bold text-xl ambient-shadow hover:scale-105 transition-all duration-300 active:scale-95 w-full flex items-center justify-center gap-2 animate-pulse-subtle">
-                Get My Free Operational Audit <span class="material-symbols-outlined">arrow_forward</span>
-</button>
-</div>
-</form>
-</div>
-</div>
-</section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Challenges Section -->
+    <section class="py-24 px-6 max-w-7xl mx-auto">
+        <div class="mb-16 reveal">
+            <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-on-background mb-4 font-headline">The Real Challenges Every <br/><span class="text-error">Icelandic Operator Faces</span></h2>
+            <p class="text-xl text-on-surface-variant max-w-2xl">Running a car rental fleet in Iceland is rewarding — but the short, intense summer season creates constant pressure.</p>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal-group" data-stagger="0.1">
+            <div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/15 flex flex-col group transition-all duration-300 hover:shadow-lg hover:border-primary/20 min-h-[160px]">
+                <div class="space-y-4">
+                    <span class="material-symbols-outlined text-4xl text-primary transition-transform group-hover:scale-110">sync_problem</span>
+                    <p class="text-on-surface text-lg font-medium">Time-consuming fleet updates and availability checks eat into your day</p>
+                </div>
+            </div>
+            <div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/15 flex flex-col group transition-all duration-300 hover:shadow-lg hover:border-primary/20 min-h-[160px]">
+                <div class="space-y-4">
+                    <span class="material-symbols-outlined text-4xl text-primary transition-transform group-hover:scale-110">forward_to_inbox</span>
+                    <p class="text-on-surface text-lg font-medium">Delayed responses to inquiries mean lost bookings to faster competitors</p>
+                </div>
+            </div>
+            <div class="bg-primary p-8 rounded-2xl text-on-primary flex flex-col group transition-all duration-300 hover:shadow-xl hover:scale-[1.02] min-h-[160px]">
+                <div class="space-y-4">
+                    <span class="material-symbols-outlined text-4xl transition-transform group-hover:rotate-12">monetization_on</span>
+                    <p class="text-lg font-medium">Pricing and listings that don’t adapt quickly enough to demand or the new kilometre-based road fees</p>
+                </div>
+            </div>
+            <div class="bg-surface-container-high p-8 rounded-2xl flex flex-col group transition-all duration-300 hover:shadow-lg min-h-[160px]">
+                <span class="material-symbols-outlined text-4xl mb-4 text-on-surface-variant transition-transform group-hover:scale-110">photo_library</span>
+                <p class="text-on-surface text-lg font-medium">Outdated content and photos that make your cars invisible on your own site and OTAs</p>
+            </div>
+            <div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/15 flex flex-col group transition-all duration-300 hover:shadow-lg hover:border-primary/20 min-h-[160px]">
+                <span class="material-symbols-outlined text-4xl mb-4 text-primary transition-transform group-hover:scale-110">bar_chart</span>
+                <p class="text-on-surface text-lg font-medium">No clear picture of which vehicles are actually making money</p>
+            </div>
+            <div class="bg-surface-container-lowest p-8 rounded-2xl border border-outline-variant/15 flex flex-col group transition-all duration-300 hover:shadow-lg hover:border-error/20 min-h-[160px]">
+                <div class="space-y-4">
+                    <span class="material-symbols-outlined text-4xl text-error transition-transform group-hover:scale-110">share</span>
+                    <p class="text-on-surface text-lg font-medium">Weak or inconsistent social presence that fails to convert followers into direct bookings</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Cards -->
+    <section class="py-24 bg-surface-container-low">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16 reveal">
+                <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-on-background mb-4 font-headline">We don’t sell software or tools. We become your <br/><span class="text-primary">done-for-you back-office partner</span></h2>
+                <p class="text-xl text-on-surface-variant">Handling the daily operational tasks so you stay focused on growth.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8 reveal-group" data-stagger="0.15">
+                <div class="advantage-card bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/10 space-y-4 cursor-default">
+                    <div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container"><span class="material-symbols-outlined">move_to_inbox</span></div>
+                    <h4 class="text-xl font-bold">Booking management</h4>
+                    <p class="text-on-surface-variant text-sm">We handle your inquiries and confirmations quickly and accurately.</p>
+                </div>
+                <div class="advantage-card bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/10 space-y-4 cursor-default">
+                    <div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container"><span class="material-symbols-outlined">sync_saved_locally</span></div>
+                    <h4 class="text-xl font-bold">Fleet content updates</h4>
+                    <p class="text-on-surface-variant text-sm">We keep listings, photos, and descriptions fresh and high-converting across all channels.</p>
+                </div>
+                <div class="advantage-card bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/10 space-y-4 cursor-default">
+                    <div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container"><span class="material-symbols-outlined">price_change</span></div>
+                    <h4 class="text-xl font-bold">Pricing reviews</h4>
+                    <p class="text-on-surface-variant text-sm">We review and update your rates to match demand and the new road-fee structure.</p>
+                </div>
+                <div class="advantage-card bg-white p-8 rounded-2xl shadow-sm border border-outline-variant/10 space-y-4 cursor-default">
+                    <div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container"><span class="material-symbols-outlined">calendar_today</span></div>
+                    <h4 class="text-xl font-bold">Social media strategy</h4>
+                    <p class="text-on-surface-variant text-sm">We create and manage your calendar, track competitors, and post content that drives direct traffic and outperforms the competition.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-24 bg-surface overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-20 reveal">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-6 font-headline">The FlexOps Framework</h2>
+                <p class="text-lg text-on-surface-variant">A 4-step transformation to turn your rental business into a high-precision operational machine.</p>
+            </div>
+            <div class="relative grid md:grid-cols-4 gap-8 reveal-group" data-stagger="0.2">
+                <div class="relative z-10 group transition-all duration-300">
+                    <div class="text-8xl font-black text-primary/5 absolute -top-12 -left-4 pointer-events-none group-hover:text-primary/10 transition-colors duration-500">01</div>
+                    <div class="space-y-4 pt-4">
+                        <div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container transition-transform duration-300 group-hover:scale-110"><span class="material-symbols-outlined">search</span></div>
+                        <h4 class="text-xl font-bold">Audit</h4>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">We review your current operations and deliver clear, prioritized insights.</p>
+                    </div>
+                </div>
+                <div class="relative z-10 group transition-all duration-300">
+                    <div class="text-8xl font-black text-primary/5 absolute -top-12 -left-4 pointer-events-none group-hover:text-primary/10 transition-colors duration-500">02</div>
+                    <div class="space-y-4 pt-4">
+                        <div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container transition-transform duration-300 group-hover:scale-110"><span class="material-symbols-outlined">work_history</span></div>
+                        <h4 class="text-xl font-bold">Take Over</h4>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">We handle the specific back-office tasks you need support with.</p>
+                    </div>
+                </div>
+                <div class="relative z-10 group transition-all duration-300">
+                    <div class="text-8xl font-black text-primary/5 absolute -top-12 -left-4 pointer-events-none group-hover:text-primary/10 transition-colors duration-500">03</div>
+                    <div class="space-y-4 pt-4">
+                        <div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container transition-transform duration-300 group-hover:scale-110"><span class="material-symbols-outlined">tune</span></div>
+                        <h4 class="text-xl font-bold">Track &amp; Optimize</h4>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">We provide regular performance reports and make ongoing adjustments for Iceland’s seasonality and regulations.</p>
+                    </div>
+                </div>
+                <div class="relative z-10 group transition-all duration-300">
+                    <div class="text-8xl font-black text-primary/5 absolute -top-12 -left-4 pointer-events-none group-hover:text-primary/10 transition-colors duration-500">04</div>
+                    <div class="space-y-4 pt-4">
+                        <div class="w-12 h-12 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container transition-transform duration-300 group-hover:scale-110"><span class="material-symbols-outlined">auto_graph</span></div>
+                        <h4 class="text-xl font-bold">Scale</h4>
+                        <p class="text-on-surface-variant text-sm leading-relaxed">Direct revenue grows while your daily workload stays manageable.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proof / Results Section -->
+    <section class="py-24 px-6 reveal">
+        <div class="max-w-7xl mx-auto bg-on-background text-on-primary rounded-[2rem] p-12 md:p-20 relative overflow-hidden group">
+            <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/20 to-transparent transition-opacity duration-1000 group-hover:opacity-40"></div>
+            <div class="relative z-10">
+                <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
+                    <div>
+                        <h2 class="text-4xl md:text-5xl font-bold mb-8 font-headline leading-tight">Delivering Results for Icelandic Fleets</h2>
+                        <div class="flex flex-wrap gap-8">
+                            <div class="flex flex-col"><span class="text-primary-fixed text-4xl font-bold">+24%</span><span class="text-sm opacity-70">direct bookings in first 30 days</span></div>
+                            <div class="flex flex-col"><span class="text-primary-fixed text-4xl font-bold">-15hr</span><span class="text-sm opacity-70">Less time on manual updates</span></div>
+                        </div>
+                    </div>
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 reveal-group" data-stagger="0.2">
+                            <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary-fixed">verified</span></div>
+                            <p class="text-lg opacity-90">Reduced OTA reliance through direct booking optimization.</p>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-primary-fixed">speed</span></div>
+                            <p class="text-lg opacity-90">Full transparency via regular back-office performance reports.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonials Grid -->
+                <div class="grid lg:grid-cols-3 gap-6">
+                    <div class="glass-panel p-8 rounded-2xl border border-white/10 text-on-background transition-transform duration-500 hover:scale-[1.02]">
+                        <div class="flex gap-1 mb-4 text-tertiary">
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-base italic mb-6">“FlexOps took the operational load off our plate so we could finally reduce OTA reliance and make the most of the summer rush.”</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-surface-dim overflow-hidden border border-primary/20">
+                                <img alt="owner avatar" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDecq5qwlyFPZ0mHNrc6IyZKf69lzButfAmHmWtCu7rreqn9G6OUlh2SHU8t_o9859ZSdtGgjDKH9Z6fbALNgEjjG7DwWzMVwxXNd2ovmy2BCvWv3XKeOjguJ-XlYjYDAkoVzN_N2-nQcnlDnfsyHcrfcu5k4lnRam6IjEQIhN_kdI6iXnEWeDbUtPEH3a2u4f_4lknqzEOOTfRKruGBnTx6gYC_3QfFLHrh2IM2mCb-1e1xgw_ysLOJcVNI3fmxcJ5HeNLSOrh0xg"/>
+                            </div>
+                            <div>
+                                <div class="font-bold text-sm">Owner</div>
+                                <div class="text-[10px] text-on-surface-variant">Reykjavik mid-size fleet</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel p-8 rounded-2xl border border-white/10 text-on-background transition-transform duration-500 hover:scale-[1.02]">
+                        <div class="flex gap-1 mb-4 text-tertiary">
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-base italic mb-6">“The audit was eye-opening. They handled the back-office tasks we hated and bookings went up almost immediately.”</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-surface-dim overflow-hidden border border-primary/20 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-on-surface-variant">person</span>
+                            </div>
+                            <div>
+                                <div class="font-bold text-sm">Owner</div>
+                                <div class="text-[10px] text-on-surface-variant">South Coast fleet</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-panel p-8 rounded-2xl border border-white/10 text-on-background transition-transform duration-500 hover:scale-[1.02]">
+                        <div class="flex gap-1 mb-4 text-tertiary">
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                            <span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                        </div>
+                        <p class="text-base italic mb-6">“Finally, a partner who understands Icelandic road taxes and the unique pressure of our peak season. Highly recommended.”</p>
+                        <div class="flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-full bg-surface-dim overflow-hidden border border-primary/20 flex items-center justify-center">
+                                <span class="material-symbols-outlined text-on-surface-variant">person</span>
+                            </div>
+                            <div>
+                                <div class="font-bold text-sm">Manager</div>
+                                <div class="text-[10px] text-on-surface-variant">North Iceland Rentals</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What You Get Section -->
+    <section class="py-24 px-6 bg-surface-container-low">
+        <div class="max-w-4xl mx-auto">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl font-bold mb-4 font-headline">Your Free Operational Audit – What You Get</h2>
+                <p class="text-on-surface-variant">You receive actionable insights with zero upfront cost. Only pay if you decide to move forward with our support.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-4 reveal-group mb-12" data-stagger="0.1">
+                <div class="bg-white p-6 rounded-xl border border-outline-variant/10 flex items-start gap-4 transition-all duration-300 hover:shadow-md hover:border-primary/20 group relative">
+                    <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">analytics</span>
+                    <div>
+                        <h5 class="font-bold flex items-center gap-2">Revenue Leak Mapping <span class="text-[10px] font-bold bg-primary/10 text-primary px-1.5 py-0.5 rounded border border-primary/20 flex items-center gap-1"><span class="material-symbols-outlined text-[10px]">picture_as_pdf</span> Sample PDF</span></h5>
+                        <p class="text-sm text-on-surface-variant">Clear picture of where revenue is leaking.</p>
+                    </div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-outline-variant/10 flex items-start gap-4 transition-all duration-300 hover:shadow-md hover:border-primary/20 group">
+                    <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">assignment_turned_in</span>
+                    <div><h5 class="font-bold">Back-office Priority List</h5><p class="text-sm text-on-surface-variant">Prioritized list of back-office tasks we can handle for you.</p></div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-outline-variant/10 flex items-start gap-4 transition-all duration-300 hover:shadow-md hover:border-primary/20 group">
+                    <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">calendar_today</span>
+                    <div><h5 class="font-bold">30-Day Action Plan</h5><p class="text-sm text-on-surface-variant">Realistic 30-day action plan for immediate improvements.</p></div>
+                </div>
+                <div class="bg-white p-6 rounded-xl border border-outline-variant/10 flex items-start gap-4 transition-all duration-300 hover:shadow-md hover:border-primary/20 group">
+                    <span class="material-symbols-outlined text-primary group-hover:scale-110 transition-transform">share</span>
+                    <div><h5 class="font-bold">Social Content Sample</h5><p class="text-sm text-on-surface-variant">Sample social content calendar with competitor insights.</p></div>
+                </div>
+            </div>
+            <p class="text-center text-on-surface-variant font-medium text-sm md:text-base italic">“Delivered as a clean PDF report within 5 business days.”</p>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-24 px-6 max-w-4xl mx-auto reveal">
+        <h2 class="text-3xl font-bold mb-12 text-center font-headline">Frequently Asked Questions</h2>
+        <div class="space-y-6 reveal-group" data-stagger="0.1">
+            <div class="bg-surface-container rounded-2xl p-6 transition-all duration-300 hover:bg-surface-container-high cursor-default">
+                <h4 class="font-bold mb-2">How long does the audit take?</h4>
+                <p class="text-on-surface-variant text-sm">60 seconds to request. Full report delivered within 5 business days.</p>
+            </div>
+            <div class="bg-surface-container rounded-2xl p-6 transition-all duration-300 hover:bg-surface-container-high cursor-default">
+                <h4 class="font-bold mb-2">Do I need to change my current setup?</h4>
+                <p class="text-on-surface-variant text-sm">No. We simply take over the back-office tasks you want help with.</p>
+            </div>
+            <div class="bg-surface-container rounded-2xl p-6 transition-all duration-300 hover:bg-surface-container-high cursor-default">
+                <h4 class="font-bold mb-2">Is this only for big fleets?</h4>
+                <p class="text-on-surface-variant text-sm">No — we work with Icelandic operators running 8–80 vehicles who want practical operational relief and more direct bookings.</p>
+            </div>
+            <div class="bg-surface-container rounded-2xl p-6 transition-all duration-300 hover:bg-surface-container-high cursor-default">
+                <h4 class="font-bold mb-2">What if I already have systems in place?</h4>
+                <p class="text-on-surface-variant text-sm">Perfect. We work alongside whatever you’re using and handle the manual work.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section with Web3Forms -->
+    <section class="py-24 px-6 max-w-5xl mx-auto reveal" id="audit-form">
+        <div class="bg-surface-container-high rounded-[3rem] p-12 md:p-20 text-center space-y-12 shadow-inner border border-outline-variant/10">
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6 tracking-tighter font-headline">Ready to run a more profitable, less stressful rental operation this season?</h2>
+                <p class="text-on-surface-variant">Let FlexOps handle the back-office heavy lifting so you can focus on growth.</p>
+            </div>
+            <div class="space-y-6">
+                <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-primary/70">Zero cost • Delivered in 5 business days • Only pay if you move forward</p>
+                
+                <form action="https://api.web3forms.com/submit" method="POST" class="max-w-xl mx-auto grid md:grid-cols-2 gap-4 text-left">
+                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+                    <input type="hidden" name="subject" value="New Audit Request - FlexOps Iceland">
+                    <input type="hidden" name="botcheck" style="display:none;">
+
+                    <div class="space-y-1">
+                        <label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-2">Name</label>
+                        <input type="text" name="name" required class="w-full rounded-xl border-outline-variant/30 focus:ring-primary focus:border-primary p-3 transition-shadow duration-300 hover:shadow-sm" placeholder="Your Name">
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-2">Email</label>
+                        <input type="email" name="email" required class="w-full rounded-xl border-outline-variant/30 focus:ring-primary focus:border-primary p-3 transition-shadow duration-300 hover:shadow-sm" placeholder="email@company.is">
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-2">Fleet Size</label>
+                        <select name="fleet_size" class="w-full rounded-xl border-outline-variant/30 focus:ring-primary focus:border-primary p-3 transition-shadow duration-300 hover:shadow-sm">
+                            <option>8-20 vehicles</option>
+                            <option>21-50 vehicles</option>
+                            <option>51-80 vehicles</option>
+                            <option>80+ vehicles</option>
+                        </select>
+                    </div>
+                    <div class="space-y-1">
+                        <label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-2">Biggest Challenge (Optional)</label>
+                        <input type="text" name="challenge" class="w-full rounded-xl border-outline-variant/30 focus:ring-primary focus:border-primary p-3 transition-shadow duration-300 hover:shadow-sm" placeholder="e.g. Manual sync, Road fees">
+                    </div>
+                    <div class="md:col-span-2 mt-4">
+                        <button type="submit" class="cta-shimmer text-on-tertiary px-12 py-5 rounded-xl font-bold text-xl ambient-shadow hover:scale-105 transition-all duration-300 active:scale-95 w-full flex items-center justify-center gap-2 animate-pulse-subtle">
+                            Get My Free Operational Audit <span class="material-symbols-outlined">arrow_forward</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
 </main>
+
 <!-- Footer -->
 <footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 border-t border-slate-100 dark:border-slate-800">
-<div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-8">
-<div class="flex flex-col items-center md:items-start gap-2">
-<div class="font-bold text-slate-900 dark:text-slate-50 text-xl font-headline">FlexOps</div>
-<p class="text-[11px] text-on-surface-variant font-medium italic">Built specifically for Icelandic operators running 8–80 vehicles</p>
-<div class="text-sm font-inter tracking-wide text-slate-500 dark:text-slate-400">
-                    © 2024 FlexOps Operational Consultancy. All rights reserved.
-                </div>
-</div>
-<div class="flex gap-8">
-<a class="text-sm font-inter tracking-wide text-slate-500 dark:text-slate-400 hover:text-primary transition-colors duration-200" href="#">Privacy Policy</a>
-<a class="text-sm font-inter tracking-wide text-slate-500 dark:text-slate-400 hover:text-primary transition-colors duration-200" href="#">Terms of Service</a>
-</div>
-</div>
+    <div class="flex flex-col md:flex-row justify-between items-center px-8 max-w-7xl mx-auto gap-8">
+        <div class="flex flex-col items-center md:items-start gap-2">
+            <div class="font-bold text-slate-900 dark:text-slate-50 text-xl font-headline">FlexOps</div>
+            <p class="text-[11px] text-on-surface-variant font-medium italic">Built specifically for Icelandic operators running 8–80 vehicles</p>
+            <div class="text-sm font-inter tracking-wide text-slate-500 dark:text-slate-400"> © 2026 FlexOps Operational Consultancy. All rights reserved. </div>
+        </div>
+        <div class="flex gap-8">
+            <a class="text-sm font-inter tracking-wide text-slate-500 dark:text-slate-400 hover:text-primary transition-colors duration-200" href="#">Privacy Policy</a>
+            <a class="text-sm font-inter tracking-wide text-slate-500 dark:text-slate-400 hover:text-primary transition-colors duration-200" href="#">Terms of Service</a>
+        </div>
+    </div>
 </footer>
-<script>
-    // Intersection Observer for scroll animations
-    document.addEventListener('DOMContentLoaded', () => {
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    
-                    // If it's a reveal-group, handle staggered children
                     if (entry.target.classList.contains('reveal-group')) {
                         const children = entry.target.children;
                         const stagger = parseFloat(entry.target.dataset.stagger) || 0.1;
@@ -593,17 +552,13 @@
                             child.style.transitionDelay = `${index * stagger}s`;
                         });
                     }
-                    // Stop observing once animation is triggered
                     observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        // Target all reveal elements
-        const targets = document.querySelectorAll('.reveal, .reveal-group');
-        targets.forEach(t => observer.observe(t));
+        document.querySelectorAll('.reveal, .reveal-group').forEach(t => observer.observe(t));
 
-        // Sticky CTA logic
         const stickyCta = document.getElementById('sticky-cta');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 500) {
@@ -614,4 +569,5 @@
         });
     });
 </script>
-```</body></html>
+</body>
+</html>
