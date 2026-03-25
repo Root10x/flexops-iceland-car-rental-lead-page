@@ -1,0 +1,63 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "settings"
+    label: "Site Settings"
+    files:
+      - label: "Hero Section"
+        name: "hero"
+        file: "content/hero.yml"
+        fields:
+          - { label: "Headline", name: "headline", widget: "string", required: true }
+          - { label: "Subheadline", name: "subheadline", widget: "text" }
+          - { label: "Background Image URL", name: "bg_image", widget: "string" }
+          - { label: "CTA Button Text", name: "cta_text", widget: "string", default: "Claim My Free Operational Audit" }
+
+      - label: "Challenges"
+        name: "challenges"
+        file: "content/challenges.yml"
+        fields:
+          - label: "Challenge Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Icon Name", name: "icon", widget: "string", hint: "e.g. sync_problem" }
+              - { label: "Text", name: "text", widget: "text" }
+
+      - label: "Testimonials"
+        name: "testimonials"
+        file: "content/testimonials.yml"
+        fields:
+          - label: "Testimonial Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Quote", name: "quote", widget: "text" }
+              - { label: "Author", name: "author", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+
+      - label: "FAQ"
+        name: "faq"
+        file: "content/faq.yml"
+        fields:
+          - label: "FAQ Items"
+            name: "items"
+            widget: "list"
+            fields:
+              - { label: "Question", name: "question", widget: "string" }
+              - { label: "Answer", name: "answer", widget: "text" }
+
+  - name: "general"
+    label: "General"
+    files:
+      - label: "Results / Stats"
+        name: "results"
+        file: "content/results.yml"
+        fields:
+          - { label: "Direct Bookings Increase", name: "bookings_increase", widget: "string", default: "+24%" }
+          - { label: "Time Saved", name: "time_saved", widget: "string", default: "-15hr" }
