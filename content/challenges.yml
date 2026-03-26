@@ -1,0 +1,13 @@
+items:
+  - icon: "sync_problem"
+    text: "Time-consuming fleet updates and availability checks eat into your day"
+  - icon: "forward_to_inbox"
+    text: "Delayed responses to inquiries mean lost bookings to faster competitors"
+  - icon: "monetization_on"
+    text: "Pricing and listings that don’t adapt quickly enough to demand or the new kilometre-based road fees"
+  - icon: "photo_library"
+    text: "Outdated content and photos that make your cars invisible on your own site and OTAs"
+  - icon: "bar_chart"
+    text: "No clear picture of which vehicles are actually making money"
+  - icon: "share"
+    text: "Weak or inconsistent social presence that fails to convert followers into direct bookings"
