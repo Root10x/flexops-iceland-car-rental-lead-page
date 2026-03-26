@@ -493,7 +493,7 @@
         </div>
     </section>
 
-   <!-- Final CTA Section - Improved Form with Website Field -->
+   <!-- Final CTA Section - AJAX + On-Page Success (No Redirect) -->
 <section class="py-24 px-6 max-w-5xl mx-auto reveal" id="audit-form">
     <div class="bg-surface-container-high rounded-[3rem] p-12 md:p-20 text-center space-y-12 shadow-inner border border-outline-variant/10">
         <div class="max-w-2xl mx-auto">
@@ -505,10 +505,9 @@
             <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-primary/70">Zero cost • Delivered in 5 business days • Only pay if you move forward</p>
 
             <!-- Form -->
-            <form id="auditForm" action="https://api.web3forms.com/submit" method="POST" class="max-w-xl mx-auto grid md:grid-cols-2 gap-4 text-left">
-                <input type="hidden" name="access_key" value="87392e90-2660-4497-8773-5e30329a4845">
+            <form id="auditForm" class="max-w-xl mx-auto grid md:grid-cols-2 gap-4 text-left">
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_KEY_HERE">
                 <input type="hidden" name="subject" value="New Audit Request - FlexOps Iceland">
-                <input type="hidden" name="redirect" value="">
                 <input type="hidden" name="botcheck" style="display:none;">
 
                 <div class="space-y-1">
@@ -556,11 +555,11 @@
                 <span class="material-symbols-outlined text-6xl text-green-600 mb-6 block">check_circle</span>
                 <h3 class="text-2xl font-bold text-green-800 mb-3">Audit Request Received!</h3>
                 <p class="text-green-700 leading-relaxed">
-                    Thank you. We’ve received your request.<br><br>
+                    Thank you. We’ve received your request and will email you within 24 hours to confirm details.<br><br>
                     <strong>Next steps:</strong><br>
-                    1. We’ll email you within 24 hours to confirm details<br>
-                    2. We deliver your personalized Operational Audit within 5 business days<br>
-                    3. You review it and decide if you want to move forward with our support
+                    1. We review your information<br>
+                    2. Deliver your personalized Operational Audit within 5 business days<br>
+                    3. You decide if you want to move forward with our done-for-you support
                 </p>
                 <button onclick="window.location.reload()" 
                         class="mt-8 px-8 py-3 bg-green-100 hover:bg-green-200 text-green-700 rounded-xl font-medium transition-colors">
@@ -660,39 +659,35 @@
 </script>
 <script>
     const form = document.getElementById('auditForm');
-    const successMsg = document.getElementById('successMessage');
-    const submitBtn = document.getElementById('submitBtn');
-
-    form.addEventListener('submit', function(e) {
-        submitBtn.innerHTML = 'Sending... <span class="material-symbols-outlined">hourglass_empty</span>';
-        submitBtn.disabled = true;
-    });
-
-    // Web3Forms success handling
-    window.addEventListener('load', () => {
-        if (window.location.search.includes('success')) {
-            form.classList.add('hidden');
-            successMsg.classList.remove('hidden');
-        }
-    });
-</script>
-<script>
-    const form = document.getElementById('auditForm');
     const successMessage = document.getElementById('successMessage');
     const submitBtn = document.getElementById('submitBtn');
 
-    form.addEventListener('submit', function() {
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();                    // ← This stops the redirect
         submitBtn.innerHTML = 'Sending... <span class="material-symbols-outlined">hourglass_empty</span>';
         submitBtn.disabled = true;
-    });
 
-    // Show success message on same page
-    window.addEventListener('load', function() {
-        if (window.location.search.includes('success')) {
-            form.style.display = 'none';
-            successMessage.classList.remove('hidden');
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData
+            });
+
+            if (response.ok) {
+                form.style.display = 'none';
+                successMessage.classList.remove('hidden');
+            } else {
+                alert('Something went wrong. Please try again.');
+            }
+        } catch (error) {
+            alert('Submission failed. Please check your connection and try again.');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = 'Get My Free Operational Audit <span class="material-symbols-outlined">arrow_forward</span>';
         }
     });
-</script>
+</script>    
 </body>
 </html>
