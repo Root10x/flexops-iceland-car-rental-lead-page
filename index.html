@@ -302,7 +302,54 @@
             </div>
         </div>
     </section>
+    <!-- Competitor Comparison Table -->
+<section class="py-24 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+        <div class="text-center mb-16 reveal">
+            <h2 class="text-4xl font-bold tracking-tight font-headline mb-4">Doing It Yourself vs FlexOps</h2>
+            <p class="text-on-surface-variant max-w-2xl mx-auto">See why Icelandic operators are switching to done-for-you back-office support</p>
+        </div>
 
+        <div class="overflow-x-auto reveal">
+            <table class="w-full min-w-[800px] border-collapse">
+                <thead>
+                    <tr class="bg-surface-container-high">
+                        <th class="p-6 text-left font-semibold">Task</th>
+                        <th class="p-6 text-center font-semibold text-error">Doing It Yourself</th>
+                        <th class="p-6 text-center font-semibold text-primary">With FlexOps</th>
+                    </tr>
+                </thead>
+                <tbody class="text-sm">
+                    <tr class="border-b border-outline-variant/30">
+                        <td class="p-6 font-medium">Inquiry & Booking Management</td>
+                        <td class="p-6 text-center text-error">4–8 hours/week, delayed replies</td>
+                        <td class="p-6 text-center text-primary">Handled same-day by our team</td>
+                    </tr>
+                    <tr class="border-b border-outline-variant/30">
+                        <td class="p-6 font-medium">Pricing Updates (incl. new road fees)</td>
+                        <td class="p-6 text-center text-error">Done occasionally when you have time</td>
+                        <td class="p-6 text-center text-primary">Weekly review + adjustments</td>
+                    </tr>
+                    <tr class="border-b border-outline-variant/30">
+                        <td class="p-6 font-medium">Fleet Listings & Photos</td>
+                        <td class="p-6 text-center text-error">Outdated → lost visibility</td>
+                        <td class="p-6 text-center text-primary">Always fresh & high-converting</td>
+                    </tr>
+                    <tr class="border-b border-outline-variant/30">
+                        <td class="p-6 font-medium">Social Media & Direct Booking Strategy</td>
+                        <td class="p-6 text-center text-error">Inconsistent or none</td>
+                        <td class="p-6 text-center text-primary">Competitor-tracked calendar</td>
+                    </tr>
+                    <tr class="border-b border-outline-variant/30 bg-primary/5">
+                        <td class="p-6 font-bold">Time Spent Per Week</td>
+                        <td class="p-6 text-center font-bold text-error">12–25+ hours</td>
+                        <td class="p-6 text-center font-bold text-primary">2–4 hours (oversight only)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
     <!-- What You Get Section -->
     <section class="py-24 px-6 bg-surface-container-low">
         <div class="max-w-4xl mx-auto">
@@ -355,52 +402,68 @@
         </div>
     </section>
 
-    <!-- Final CTA Section with Web3Forms -->
-    <section class="py-24 px-6 max-w-5xl mx-auto reveal" id="audit-form">
-        <div class="bg-surface-container-high rounded-[3rem] p-12 md:p-20 text-center space-y-12 shadow-inner border border-outline-variant/10">
-            <div class="max-w-2xl mx-auto">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6 tracking-tighter font-headline">Ready to run a more profitable, less stressful rental operation this season?</h2>
-                <p class="text-on-surface-variant">Let FlexOps handle the back-office heavy lifting so you can focus on growth.</p>
-            </div>
-            <div class="space-y-6">
-                <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-primary/70">Zero cost • Delivered in 5 business days • Only pay if you move forward</p>
-                
-                <form action="https://api.web3forms.com/submit" method="POST" class="max-w-xl mx-auto grid md:grid-cols-2 gap-4 text-left">
-                    <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
-                    <input type="hidden" name="subject" value="New Audit Request - FlexOps Iceland">
-                    <input type="hidden" name="botcheck" style="display:none;">
+   <!-- Final CTA Section with Web3Forms + Success Message -->
+<section class="py-24 px-6 max-w-5xl mx-auto reveal" id="audit-form">
+    <div class="bg-surface-container-high rounded-[3rem] p-12 md:p-20 text-center space-y-12 shadow-inner border border-outline-variant/10">
+        <div class="max-w-2xl mx-auto">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6 tracking-tighter font-headline">Ready to run a more profitable, less stressful rental operation this season?</h2>
+            <p class="text-on-surface-variant">Let FlexOps handle the back-office heavy lifting so you can focus on growth.</p>
+        </div>
+        <div class="space-y-6">
+            <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-primary/70">Zero cost • Delivered in 5 business days • Only pay if you move forward</p>
+            
+            <form id="auditForm" action="https://api.web3forms.com/submit" method="POST" class="max-w-xl mx-auto grid md:grid-cols-2 gap-4 text-left">
+                <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY_HERE">
+                <input type="hidden" name="subject" value="New Audit Request - FlexOps Iceland">
+                <input type="hidden" name="botcheck" style="display:none;">
 
-                    <div class="space-y-1">
-                        <label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-2">Name</label>
-                        <input type="text" name="name" required class="w-full rounded-xl border-outline-variant/30 focus:ring-primary focus:border-primary p-3 transition-shadow duration-300 hover:shadow-sm" placeholder="Your Name">
-                    </div>
-                    <div class="space-y-1">
-                        <label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-2">Email</label>
-                        <input type="email" name="email" required class="w-full rounded-xl border-outline-variant/30 focus:ring-primary focus:border-primary p-3 transition-shadow duration-300 hover:shadow-sm" placeholder="email@company.is">
-                    </div>
-                    <div class="space-y-1">
-                        <label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-2">Fleet Size</label>
-                        <select name="fleet_size" class="w-full rounded-xl border-outline-variant/30 focus:ring-primary focus:border-primary p-3 transition-shadow duration-300 hover:shadow-sm">
-                            <option>8-20 vehicles</option>
-                            <option>21-50 vehicles</option>
-                            <option>51-80 vehicles</option>
-                            <option>80+ vehicles</option>
-                        </select>
-                    </div>
-                    <div class="space-y-1">
-                        <label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-2">Biggest Challenge (Optional)</label>
-                        <input type="text" name="challenge" class="w-full rounded-xl border-outline-variant/30 focus:ring-primary focus:border-primary p-3 transition-shadow duration-300 hover:shadow-sm" placeholder="e.g. Manual sync, Road fees">
-                    </div>
-                    <div class="md:col-span-2 mt-4">
-                        <button type="submit" class="cta-shimmer text-on-tertiary px-12 py-5 rounded-xl font-bold text-xl ambient-shadow hover:scale-105 transition-all duration-300 active:scale-95 w-full flex items-center justify-center gap-2 animate-pulse-subtle">
-                            Get My Free Operational Audit <span class="material-symbols-outlined">arrow_forward</span>
-                        </button>
-                    </div>
-                </form>
+                <div class="space-y-1">
+                    <label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-2">Name</label>
+                    <input type="text" name="name" required class="w-full rounded-xl border-outline-variant/30 focus:ring-primary focus:border-primary p-3 transition-shadow duration-300 hover:shadow-sm" placeholder="Your Name">
+                </div>
+                <div class="space-y-1">
+                    <label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-2">Email</label>
+                    <input type="email" name="email" required class="w-full rounded-xl border-outline-variant/30 focus:ring-primary focus:border-primary p-3 transition-shadow duration-300 hover:shadow-sm" placeholder="email@company.is">
+                </div>
+                <div class="space-y-1">
+                    <label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-2">Fleet Size</label>
+                    <select name="fleet_size" class="w-full rounded-xl border-outline-variant/30 focus:ring-primary focus:border-primary p-3 transition-shadow duration-300 hover:shadow-sm">
+                        <option>8-20 vehicles</option>
+                        <option>21-50 vehicles</option>
+                        <option>51-80 vehicles</option>
+                        <option>80+ vehicles</option>
+                    </select>
+                </div>
+                <div class="space-y-1">
+                    <label class="text-xs font-bold uppercase tracking-wider text-on-surface-variant ml-2">Preferred Audit Delivery Week</label>
+                    <select name="preferred_week" class="w-full rounded-xl border-outline-variant/30 focus:ring-primary focus:border-primary p-3 transition-shadow duration-300 hover:shadow-sm">
+                        <option value="">Any week is fine</option>
+                        <option>Next week</option>
+                        <option>In 2 weeks</option>
+                        <option>In 3 weeks</option>
+                        <option>Before peak season (May)</option>
+                    </select>
+                </div>
+
+                <div class="md:col-span-2 mt-4">
+                    <button type="submit" id="submitBtn"
+                            class="cta-shimmer text-on-tertiary px-12 py-5 rounded-xl font-bold text-xl ambient-shadow hover:scale-105 transition-all duration-300 active:scale-95 w-full flex items-center justify-center gap-2 animate-pulse-subtle">
+                        Get My Free Operational Audit 
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+                </div>
+            </form>
+
+            <!-- Success Message (hidden by default) -->
+            <div id="successMessage" class="hidden max-w-xl mx-auto bg-green-50 border border-green-200 rounded-2xl p-8 text-center">
+                <span class="material-symbols-outlined text-5xl text-green-600 mb-4 block">check_circle</span>
+                <h3 class="text-2xl font-bold text-green-800 mb-2">Audit Request Received!</h3>
+                <p class="text-green-700">We'll email you within 24 hours with next steps and deliver your personalized Operational Audit within 5 business days.</p>
+                <button onclick="window.location.reload()" class="mt-6 text-green-700 underline">Submit another request</button>
             </div>
         </div>
-    </section>
-</main>
+    </div>
+</section>
 
 <!-- Footer -->
 <footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 border-t border-slate-100 dark:border-slate-800">
@@ -489,6 +552,24 @@
 
     // Trigger CMS load after js-yaml is ready
     window.addEventListener('load', loadCMSContent);
+</script>
+<script>
+    const form = document.getElementById('auditForm');
+    const successMsg = document.getElementById('successMessage');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', function(e) {
+        submitBtn.innerHTML = 'Sending... <span class="material-symbols-outlined">hourglass_empty</span>';
+        submitBtn.disabled = true;
+    });
+
+    // Web3Forms success handling
+    window.addEventListener('load', () => {
+        if (window.location.search.includes('success')) {
+            form.classList.add('hidden');
+            successMsg.classList.remove('hidden');
+        }
+    });
 </script>
 </body>
 </html>
