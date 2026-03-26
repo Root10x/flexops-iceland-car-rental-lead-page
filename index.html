@@ -78,10 +78,37 @@
 </head>
 <body class="bg-background text-on-background font-body antialiased">
 
-<!-- Sticky CTA Bar -->
-<div class="fixed top-0 w-full z-[60] bg-primary text-on-primary py-3 px-6 flex justify-between items-center transform -translate-y-full transition-transform duration-300 shadow-lg" id="sticky-cta">
-    <p class="font-bold text-sm md:text-base">Claim My Free Operational Audit</p>
-    <button class="bg-on-primary text-primary px-4 py-1.5 rounded-lg font-bold text-xs uppercase tracking-wider hover:bg-opacity-90 transition-colors" onclick="document.getElementById('audit-form').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+<!-- Enhanced Sticky Bar - Premium Match to Your Design -->
+<div class="fixed top-0 w-full z-[60] bg-primary/95 backdrop-blur-xl border-b border-white/10 text-on-primary py-3 px-6 flex justify-between items-center transform -translate-y-full transition-transform duration-300 shadow-lg" id="sticky-cta">
+    <div class="max-w-7xl mx-auto w-full flex items-center justify-between">
+        
+        <!-- Left: Main CTA -->
+        <div class="flex items-center gap-3">
+            <p class="font-bold text-sm md:text-base tracking-tight">Claim My Free Operational Audit</p>
+        </div>
+
+        <!-- Center Navigation (Desktop only) -->
+        <div class="hidden md:flex items-center gap-8 text-xs uppercase tracking-[0.125em] font-medium">
+            <a href="#challenges" 
+               onclick="document.getElementById('challenges').scrollIntoView({behavior: 'smooth'})" 
+               class="hover:text-primary-fixed transition-colors">Challenges</a>
+            <a href="#framework" 
+               onclick="document.getElementById('framework').scrollIntoView({behavior: 'smooth'})" 
+               class="hover:text-primary-fixed transition-colors">Framework</a>
+            <a href="#how-it-works" 
+               onclick="document.getElementById('how-it-works').scrollIntoView({behavior: 'smooth'})" 
+               class="hover:text-primary-fixed transition-colors">How it Works</a>
+            <a href="#comparison" 
+               onclick="document.getElementById('comparison').scrollIntoView({behavior: 'smooth'})" 
+               class="hover:text-primary-fixed transition-colors">Comparison</a>
+        </div>
+
+        <!-- Right: Button -->
+        <button onclick="document.getElementById('audit-form').scrollIntoView({behavior: 'smooth'})"
+                class="bg-on-primary text-primary px-6 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider hover:scale-105 active:scale-95 transition-all duration-200 shadow-md">
+            GET STARTED
+        </button>
+    </div>
 </div>
 
 <!-- TopAppBar -->
