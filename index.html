@@ -417,7 +417,10 @@
     </div>
 </footer>
 
+<!-- Combined Script: Animations + CMS Content Loading -->
+<script src="https://cdn.jsdelivr.net/npm/js-yaml@4/dist/js-yaml.min.js"></script>
 <script>
+    // === YOUR ORIGINAL ANIMATIONS (kept 100% intact) ===
     document.addEventListener('DOMContentLoaded', () => {
         const observerOptions = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
         const observer = new IntersectionObserver((entries) => {
@@ -447,6 +450,47 @@
             }
         });
     });
+
+    // === NEW CMS LOADING CODE (Hero + Specialist) ===
+    async function loadCMSContent() {
+        try {
+            // Load Hero
+            const heroRes = await fetch('/content/hero.yml');
+            const heroText = await heroRes.text();
+            const hero = jsyaml.load(heroText);
+
+            if (hero && hero.headline) {
+                const headlineEl = document.querySelector('h1.font-headline');
+                if (headlineEl) headlineEl.innerHTML = hero.headline;
+            }
+            if (hero && hero.subheadline) {
+                const subheadlineEl = document.querySelector('p.text-xl.text-slate-200');
+                if (subheadlineEl) subheadlineEl.textContent = hero.subheadline;
+            }
+
+            // Load Specialist Focus Section
+            const specRes = await fetch('/content/specialist.yml');
+            const specText = await specRes.text();
+            const specialist = jsyaml.load(specText);
+
+            if (specialist) {
+                const specSection = document.querySelector('.bg-\\[\\#1a232e\\]');
+                if (specSection) {
+                    const titleEl = specSection.querySelector('h3');
+                    const subtitleEl = specSection.querySelector('p.text-slate-400');
+                    if (titleEl && specialist.title) titleEl.textContent = specialist.title;
+                    if (subtitleEl && specialist.subtitle) subtitleEl.textContent = specialist.subtitle;
+                }
+            }
+        } catch (e) {
+            console.log("CMS content not loaded yet — using static fallback");
+        }
+    }
+
+    // Trigger CMS load after js-yaml is ready
+    window.addEventListener('load', loadCMSContent);
 </script>
+</body>
+</html>
 </body>
 </html>
