@@ -676,7 +676,23 @@
         }
     });
 </script>
-</body>
-</html>
+<script>
+    const form = document.getElementById('auditForm');
+    const successMessage = document.getElementById('successMessage');
+    const submitBtn = document.getElementById('submitBtn');
+
+    form.addEventListener('submit', function() {
+        submitBtn.innerHTML = 'Sending... <span class="material-symbols-outlined">hourglass_empty</span>';
+        submitBtn.disabled = true;
+    });
+
+    // Show success message on same page
+    window.addEventListener('load', function() {
+        if (window.location.search.includes('success')) {
+            form.style.display = 'none';
+            successMessage.classList.remove('hidden');
+        }
+    });
+</script>
 </body>
 </html>
