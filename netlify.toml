@@ -1,9 +1,13 @@
 [build]
-  command = ""          # No build needed for plain HTML
-  publish = "."         # Publish the root folder
+  command = ""
+  publish = "."
 
-# Optional: Redirect /admin to the admin folder
 [[redirects]]
   from = "/admin"
+  to = "/admin/index.html"
+  status = 200
+
+[[redirects]]
+  from = "/admin/*"
   to = "/admin/index.html"
   status = 200
