@@ -15,6 +15,8 @@ collections:
         fields:
           - { label: "Site Title", name: "site_title", widget: "string" }
           - { label: "Meta Description", name: "meta_description", widget: "text" }
+          - { label: "Favicon URL", name: "favicon", widget: "string" }
+          - { label: "Logo URL", name: "logo", widget: "string" }
 
       - name: "analytics"
         label: "Analytics"
@@ -22,6 +24,7 @@ collections:
         fields:
           - { label: "Google Analytics 4 ID", name: "ga4_id", widget: "string" }
           - { label: "Meta Pixel ID", name: "meta_pixel_id", widget: "string" }
+          - { label: "GDPR Consent Text", name: "gdpr_text", widget: "text" }
 
   - name: "hero"
     label: "Hero"
@@ -38,3 +41,4 @@ collections:
       - { label: "Subtitle", name: "subtitle", widget: "string" }
 
 publish_mode: simple
+display_url: "https://carrentals.flxops.co"
