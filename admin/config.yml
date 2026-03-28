@@ -9,22 +9,13 @@ collections:
   - name: "site_settings"
     label: "Site Settings"
     files:
-      - name: "general"
-        label: "General"
-        file: "content/settings/general.yml"
-        fields:
-          - { label: "Site Title", name: "site_title", widget: "string" }
-          - { label: "Meta Description", name: "meta_description", widget: "text" }
-          - { label: "Favicon URL", name: "favicon", widget: "string" }
-          - { label: "Logo URL", name: "logo", widget: "string" }
-
       - name: "analytics"
         label: "Analytics"
         file: "content/settings/analytics.yml"
         fields:
-          - { label: "Google Analytics 4 ID", name: "ga4_id", widget: "string" }
+          - { label: "Google Analytics 4 ID (G-XXXXXX)", name: "ga4_id", widget: "string" }
           - { label: "Meta Pixel ID", name: "meta_pixel_id", widget: "string" }
-          - { label: "GDPR Consent Text", name: "gdpr_text", widget: "text" }
+          - { label: "GDPR Consent Text", name: "gdpr_text", widget: "text", default: "We use cookies..." }
 
   - name: "hero"
     label: "Hero"
