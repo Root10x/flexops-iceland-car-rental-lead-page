@@ -6,6 +6,7 @@ media_folder: "static/images"
 public_folder: "/images"
 
 collections:
+  # Site Settings
   - name: "site_settings"
     label: "Site Settings"
     files:
@@ -33,6 +34,7 @@ collections:
           - { label: "Meta Pixel ID", name: "meta_pixel_id", widget: "string" }
           - { label: "GDPR Consent Text", name: "gdpr_text", widget: "text" }
 
+  # Hero Section
   - name: "hero"
     label: "Hero"
     file: "content/hero.yml"
@@ -40,6 +42,7 @@ collections:
       - { label: "Headline", name: "headline", widget: "string" }
       - { label: "Subheadline", name: "subheadline", widget: "text" }
 
+  # Specialist Strip
   - name: "specialist"
     label: "Specialist Strip"
     file: "content/specialist.yml"
