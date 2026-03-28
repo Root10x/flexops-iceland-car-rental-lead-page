@@ -6,7 +6,7 @@ media_folder: "static/images"
 public_folder: "/images"
 
 collections:
-  # Site Settings
+  # Site Settings - uses "files:"
   - name: "site_settings"
     label: "Site Settings"
     files:
@@ -19,13 +19,6 @@ collections:
           - { label: "Favicon URL", name: "favicon", widget: "string" }
           - { label: "Logo URL", name: "logo", widget: "string" }
 
-      - name: "seo"
-        label: "SEO"
-        file: "content/settings/seo.yml"
-        fields:
-          - { label: "Default Meta Title", name: "meta_title", widget: "string" }
-          - { label: "Default Meta Description", name: "meta_description", widget: "text" }
-
       - name: "analytics"
         label: "Analytics"
         file: "content/settings/analytics.yml"
@@ -34,7 +27,7 @@ collections:
           - { label: "Meta Pixel ID", name: "meta_pixel_id", widget: "string" }
           - { label: "GDPR Consent Text", name: "gdpr_text", widget: "text" }
 
-  # Hero Section
+  # Hero - uses "files:"
   - name: "hero"
     label: "Hero"
     file: "content/hero.yml"
@@ -42,7 +35,7 @@ collections:
       - { label: "Headline", name: "headline", widget: "string" }
       - { label: "Subheadline", name: "subheadline", widget: "text" }
 
-  # Specialist Strip
+  # Specialist - uses "files:"
   - name: "specialist"
     label: "Specialist Strip"
     file: "content/specialist.yml"
