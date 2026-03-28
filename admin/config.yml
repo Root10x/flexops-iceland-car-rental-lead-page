@@ -1,12 +1,12 @@
 backend:
   name: git-gateway
-  branch: main   # change to your default branch if not main
+  branch: main
 
 media_folder: "static/images"
 public_folder: "/images"
 
-# Site-wide settings collection
 collections:
+  # 1. Site Settings (single files)
   - name: "site_settings"
     label: "Site Settings"
     files:
@@ -15,20 +15,18 @@ collections:
         file: "content/settings/general.yml"
         fields:
           - { label: "Site Title", name: "site_title", widget: "string", default: "FlexOps | Operational Excellence for Icelandic Car Rental Fleets" }
-          - { label: "Site Description", name: "site_description", widget: "text" }
+          - { label: "Meta Description", name: "meta_description", widget: "text" }
           - { label: "Favicon URL", name: "favicon", widget: "string" }
           - { label: "Logo URL", name: "logo", widget: "string" }
-          - { label: "Primary Color", name: "primary_color", widget: "color", default: "#006b5f" }
 
       - name: "seo"
-        label: "SEO & Meta"
+        label: "SEO Settings"
         file: "content/settings/seo.yml"
         fields:
           - { label: "Default Meta Title", name: "meta_title", widget: "string" }
           - { label: "Default Meta Description", name: "meta_description", widget: "text" }
-          - { label: "Canonical URL", name: "canonical", widget: "string" }
           - { label: "Open Graph Image URL", name: "og_image", widget: "string" }
-          - { label: "Robots.txt", name: "robots", widget: "text", default: "User-agent: *\nAllow: /" }
+          - { label: "Canonical URL", name: "canonical", widget: "string" }
 
       - name: "analytics"
         label: "Analytics & Tracking"
@@ -37,12 +35,11 @@ collections:
           - { label: "Google Analytics 4 ID (G-XXXXXX)", name: "ga4_id", widget: "string" }
           - { label: "Meta Pixel ID", name: "meta_pixel_id", widget: "string" }
           - { label: "LinkedIn Insight ID", name: "linkedin_id", widget: "string" }
-          - { label: "X / Twitter Pixel", name: "twitter_pixel", widget: "string" }
-          - { label: "Custom Head Scripts (for consent managers etc.)", name: "custom_head", widget: "text", default: "" }
+          - { label: "Custom Head Scripts", name: "custom_head", widget: "text" }
           - { label: "GDPR Consent Banner Text", name: "gdpr_text", widget: "text", default: "We use cookies to improve your experience. By continuing, you agree to our Privacy Policy." }
           - { label: "Privacy Policy URL", name: "privacy_url", widget: "string" }
 
-  # Your existing content collections (expanded)
+  # 2. Landing Page Content (using files for simplicity - one YAML per section)
   - name: "hero"
     label: "Hero Section"
     file: "content/hero.yml"
@@ -59,7 +56,7 @@ collections:
       - { label: "Subtitle", name: "subtitle", widget: "string" }
 
   - name: "challenges"
-    label: "Challenges Section"
+    label: "Challenges"
     file: "content/challenges.yml"
     fields:
       - label: "Items"
@@ -82,12 +79,39 @@ collections:
           - { label: "Description", name: "description", widget: "text" }
           - { label: "Icon", name: "icon", widget: "string" }
 
-  # Add more collections for Comparison, What You Get, FAQ, etc. as needed — I can expand this further.
+  - name: "how_it_works"
+    label: "How FlexOps Works"
+    file: "content/how_it_works.yml"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - label: "Benefits"
+        name: "benefits"
+        widget: "list"
+        fields:
+          - { label: "Text", name: "text", widget: "text" }
 
-# Optional: Make admin look more premium (dark mode friendly)
-locale: "en"
+  - name: "comparison"
+    label: "Comparison Table"
+    file: "content/comparison.yml"
+    fields:
+      - label: "Rows"
+        name: "rows"
+        widget: "list"
+        fields:
+          - { label: "Task", name: "task", widget: "string" }
+          - { label: "DIY", name: "diy", widget: "text" }
+          - { label: "With FlexOps", name: "flexops", widget: "text" }
+
+  - name: "faq"
+    label: "FAQ"
+    file: "content/faq.yml"
+    fields:
+      - label: "Questions"
+        name: "items"
+        widget: "list"
+        fields:
+          - { label: "Question", name: "question", widget: "string" }
+          - { label: "Answer", name: "answer", widget: "text" }
+
+publish_mode: simple
 display_url: "https://carrentals.flxops.co"
-logo_url: "https://carrentals.flxops.co/images/logo.png"   # change to your logo
-
-# Publish mode
-publish_mode: "simple"
