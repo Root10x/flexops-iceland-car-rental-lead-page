@@ -13,7 +13,7 @@ collections:
         label: "Analytics"
         file: "content/settings/analytics.yml"
         fields:
-          - { label: "Google Analytics 4 ID (G-XXXXXX)", name: "ga4_id", widget: "string" }
+          - { label: "Google Analytics 4 ID (G-BH48XCHYVV)", name: "ga4_id", widget: "string" }
           - { label: "Meta Pixel ID", name: "meta_pixel_id", widget: "string" }
           - { label: "GDPR Consent Text", name: "gdpr_text", widget: "text", default: "We use cookies..." }
 
