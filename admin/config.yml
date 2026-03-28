@@ -6,7 +6,7 @@ media_folder: "static/images"
 public_folder: "/images"
 
 collections:
-  # Site Settings
+  # Site Settings (all as single files)
   - name: "site_settings"
     label: "Site Settings"
     files:
@@ -32,14 +32,14 @@ collections:
         label: "Analytics & Tracking"
         file: "content/settings/analytics.yml"
         fields:
-          - { label: "Google Analytics 4 ID", name: "ga4_id", widget: "string" }
+          - { label: "Google Analytics 4 ID (G-XXXXXX)", name: "ga4_id", widget: "string" }
           - { label: "Meta Pixel ID", name: "meta_pixel_id", widget: "string" }
           - { label: "LinkedIn Insight ID", name: "linkedin_id", widget: "string" }
           - { label: "Custom Head Scripts", name: "custom_head", widget: "text" }
-          - { label: "GDPR Consent Text", name: "gdpr_text", widget: "text", default: "We use cookies to improve your experience. By continuing, you agree to our Privacy Policy." }
+          - { label: "GDPR Consent Banner Text", name: "gdpr_text", widget: "text", default: "We use cookies to improve your experience. By continuing, you agree to our Privacy Policy." }
           - { label: "Privacy Policy URL", name: "privacy_url", widget: "string" }
 
-  # Landing Page Sections (all as single files)
+  # Landing Page Sections (all single files)
   - name: "hero"
     label: "Hero"
     file: "content/hero.yml"
