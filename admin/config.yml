@@ -6,7 +6,6 @@ media_folder: "static/images"
 public_folder: "/images"
 
 collections:
-  # Site Settings (all as single files)
   - name: "site_settings"
     label: "Site Settings"
     files:
@@ -14,7 +13,7 @@ collections:
         label: "General"
         file: "content/settings/general.yml"
         fields:
-          - { label: "Site Title", name: "site_title", widget: "string", default: "FlexOps | Operational Excellence for Icelandic Car Rental Fleets" }
+          - { label: "Site Title", name: "site_title", widget: "string" }
           - { label: "Meta Description", name: "meta_description", widget: "text" }
           - { label: "Favicon URL", name: "favicon", widget: "string" }
           - { label: "Logo URL", name: "logo", widget: "string" }
@@ -25,28 +24,21 @@ collections:
         fields:
           - { label: "Default Meta Title", name: "meta_title", widget: "string" }
           - { label: "Default Meta Description", name: "meta_description", widget: "text" }
-          - { label: "OG Image URL", name: "og_image", widget: "string" }
-          - { label: "Canonical URL", name: "canonical", widget: "string" }
 
       - name: "analytics"
-        label: "Analytics & Tracking"
+        label: "Analytics"
         file: "content/settings/analytics.yml"
         fields:
-          - { label: "Google Analytics 4 ID (G-XXXXXX)", name: "ga4_id", widget: "string" }
+          - { label: "Google Analytics 4 ID", name: "ga4_id", widget: "string" }
           - { label: "Meta Pixel ID", name: "meta_pixel_id", widget: "string" }
-          - { label: "LinkedIn Insight ID", name: "linkedin_id", widget: "string" }
-          - { label: "Custom Head Scripts", name: "custom_head", widget: "text" }
-          - { label: "GDPR Consent Banner Text", name: "gdpr_text", widget: "text", default: "We use cookies to improve your experience. By continuing, you agree to our Privacy Policy." }
-          - { label: "Privacy Policy URL", name: "privacy_url", widget: "string" }
+          - { label: "GDPR Consent Text", name: "gdpr_text", widget: "text" }
 
-  # Landing Page Sections (all single files)
   - name: "hero"
     label: "Hero"
     file: "content/hero.yml"
     fields:
       - { label: "Headline", name: "headline", widget: "string" }
       - { label: "Subheadline", name: "subheadline", widget: "text" }
-      - { label: "Background Image URL", name: "bg_image", widget: "string" }
 
   - name: "specialist"
     label: "Specialist Strip"
@@ -54,64 +46,6 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Subtitle", name: "subtitle", widget: "string" }
-
-  - name: "challenges"
-    label: "Challenges"
-    file: "content/challenges.yml"
-    fields:
-      - label: "Items"
-        name: "items"
-        widget: "list"
-        fields:
-          - { label: "Icon", name: "icon", widget: "string" }
-          - { label: "Text", name: "text", widget: "text" }
-
-  - name: "framework"
-    label: "Framework"
-    file: "content/framework.yml"
-    fields:
-      - label: "Steps"
-        name: "steps"
-        widget: "list"
-        fields:
-          - { label: "Number", name: "number", widget: "string" }
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Description", name: "description", widget: "text" }
-          - { label: "Icon", name: "icon", widget: "string" }
-
-  - name: "how_it_works"
-    label: "How It Works"
-    file: "content/how_it_works.yml"
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - label: "Benefits"
-        name: "benefits"
-        widget: "list"
-        fields:
-          - { label: "Text", name: "text", widget: "text" }
-
-  - name: "comparison"
-    label: "Comparison Table"
-    file: "content/comparison.yml"
-    fields:
-      - label: "Rows"
-        name: "rows"
-        widget: "list"
-        fields:
-          - { label: "Task", name: "task", widget: "string" }
-          - { label: "DIY", name: "diy", widget: "text" }
-          - { label: "With FlexOps", name: "flexops", widget: "text" }
-
-  - name: "faq"
-    label: "FAQ"
-    file: "content/faq.yml"
-    fields:
-      - label: "Items"
-        name: "items"
-        widget: "list"
-        fields:
-          - { label: "Question", name: "question", widget: "string" }
-          - { label: "Answer", name: "answer", widget: "text" }
 
 publish_mode: simple
 display_url: "https://carrentals.flxops.co"
